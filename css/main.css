@@ -192,9 +192,17 @@ header .btn-hamburger .material-symbols-outlined {
   font-size: 70px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.visual > .inner h1 {
+.visual > .inner .visual__wrapper {
   font-family: "Diphylleia", serif;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.5rem;
+  width: 90%;
+  /* margin: 0 auto; */
+}
+.visual > .inner .visual__word {
 }
 .visual > .inner .purple {
 color: #9b30ff;
