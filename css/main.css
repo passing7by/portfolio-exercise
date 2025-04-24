@@ -560,6 +560,10 @@ footer .copyright {
     letter-spacing: 10px;
   }
 
+  .visual > .inner {
+    font-size: 3rem;
+  }
+
   .about {
     padding: 100px 0;
   }
