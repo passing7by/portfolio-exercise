@@ -107,3 +107,37 @@ window.addEventListener('scroll', function () {
     toTopEl.style.transform = 'translateX(100px)'; 
   }
 });
+
+//
+const btnHamburger = document.querySelector('.btn-hamburger');
+const nav = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav a');
+// console.log(btnHamburger);
+// console.log(nav);
+// console.log(menuItems);
+
+btnHamburger.addEventListener('click', function () {
+  // if (nav.style.height == '0') {
+  //   nav.style.height = '100%';
+  // } else {
+  //     nav.style.height = '0';
+  // }
+  // 클릭을 했을 때, 내브의 높이가 0이면 내브의 높이를 100으로 만들어라.
+  // 클릭을 했을 때, 내브의 높이가 0이 아니면 내브의 높이를 0으로 만들어라.
+
+  // if (nav.classList.contains('active')) {
+  //   nav.classList.remove('active')
+  // } else {
+  //   nav.classList.add('active')
+  // }
+
+  // 위의 코드는 복잡... 토글 기능 활용
+  nav.classList.toggle('active');
+});
+
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener('click', function () {
+    nav.classList.remove('active');
+  });
+});
+
