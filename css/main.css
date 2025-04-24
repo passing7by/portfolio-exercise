@@ -569,7 +569,8 @@ footer .copyright {
   }
 
   .visual > .inner {
-    font-size: 3rem;
+    font-size: 2.25rem;
+    margin: 0 auto;
   }
 
   .about {
