@@ -91,6 +91,8 @@ yearSpan.textContent = new Date().getFullYear();
 // 페이지 최상단으로 이동
 const toTopEl = document.querySelector('#to-top');
 
+const visualSpans = document.querySelectorAll('.visual__word span');
+
 // 페이지에 스크롤 이벤트 감지를 추가!
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function () {
@@ -102,9 +104,19 @@ window.addEventListener('scroll', function () {
   if (window.scrollY >= 500) {
     toTopEl.style.opacity = 1;
     toTopEl.style.transform = 'translateX(0)';   
+
+    // visual 섹션 애니메이션 숨기기
+    visualSpans.forEach((visualSpan) => {
+      visualSpan.classList.remove('animate-flash');
+    })
   } else {
     toTopEl.style.opacity = 0;
     toTopEl.style.transform = 'translateX(100px)'; 
+
+    // visual 섹션 애니메이션 나타나게 하기
+    visualSpans.forEach((visualSpan) => {
+      visualSpan.classList.add('animate-flash');
+    })
   }
 });
 
@@ -140,4 +152,10 @@ menuItems.forEach((menuItem) => {
     nav.classList.remove('active');
   });
 });
+
+// 스크롤바의 너비 계산
+function getBodyScrollbarWidth() {
+  return window.innerWidth - document.documentElement.offsetWidth;
+}
+console.log(getBodyScrollbarWidth());
 
